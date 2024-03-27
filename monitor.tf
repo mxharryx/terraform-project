@@ -8,6 +8,8 @@ resource "azurerm_monitor_action_group" "email_alert" {
     email_address = var.email_address
     use_common_alert_schema = true
     }
+
+    depends_on = [ azurerm_resource_group.webapp-rg ]
 }
 
 resource "azurerm_monitor_metric_alert" "requests_threshold_alert" {
