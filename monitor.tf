@@ -5,7 +5,7 @@ resource "azurerm_monitor_action_group" "email_alert" {
 
     email_receiver {
     name          = "send-email-alert"
-    email_address = "mdxharry@gmail.com"
+    email_address = var.email_address
     use_common_alert_schema = true
     }
 }
